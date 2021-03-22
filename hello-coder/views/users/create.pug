@@ -10,10 +10,14 @@ block content
          
      
     form(action="/users/create", method="POST")
+     .form-group
         label(for="name") Name 
+        span &nbsp;
         input#name(name="name", type="text", value= values ? values.name : "")
-
-        label(for="phone") Phone  
+     span &nbsp;
+     .form-group
+        label(for="phone") Phone 
+        span &nbsp; 
         input#phone(name="phone", type="text", value= values ? values.phone : "")
 
-        button Create
+     button.btn.btn-primary Create

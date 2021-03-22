@@ -1,4 +1,22 @@
 {
-  "usersdb": [],
+  "usersdb": [
+    {
+      "name": "Nguyễn Van A",
+      "phone": "+84123456789",
+      "id": "yB_noTW3F"
+    },
+    {
+      "name": "TamNguyen",
+      "phone": "0898391560",
+      "id": "D2TRrdE0o"
+    },
+    {
+      "name": "Nguyễn Huỳnh Minh Tâm",
+      "phone": "0898391560",
+      "id": "iKQ9OOaSa",
+      "email": "nhmtam.c3tqcap.a3@gmail.com",
+      "password": "1111"
+    }
+  ],
   "users": []
 }
