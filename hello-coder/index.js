@@ -4,7 +4,7 @@ var port = 3000;
 // var bodyParser=require('body-parser');
 
 var cookieParser = require('cookie-parser');
-app.use(cookieParser());
+app.use(cookieParser('asdkaodkoas10230'));
 
 var userRouter = require('./routes/user.route');
 var authRoute = require('./routes/auth.route');
