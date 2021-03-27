@@ -1,10 +1,14 @@
+require('dotenv').config();
+
+console.log(process.env.SESSION_SECRET);
+
 var express = require('express');//Nạp thư viện express
 var app = express();
-var port = 3000;
+var port = 3000; 
 // var bodyParser=require('body-parser');
 
 var cookieParser = require('cookie-parser');
-app.use(cookieParser('asdkaodkoas10230'));
+app.use(cookieParser(process.env.SESSION_SECRET));
 
 var userRouter = require('./routes/user.route');
 var authRoute = require('./routes/auth.route');
