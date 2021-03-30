@@ -12,6 +12,7 @@ app.use(cookieParser(process.env.SESSION_SECRET));
 
 var userRouter = require('./routes/user.route');
 var authRoute = require('./routes/auth.route');
+var productRouter = require('./routes/product.route');
 
 var authMiddleware = require('./middlewares/auth.middleware');
 
@@ -33,6 +34,7 @@ app.get('/', function(req, res){
 
 app.use('/users', authMiddleware.requireAuth, userRouter);
 app.use('/auth', authRoute);
+app.use('/products', productRouter);
 
 app.listen(port, function() {
     console.log('Server listening on port ' + port);
