@@ -9,7 +9,7 @@ block content
       .alert.alert-danger=error1 
          
      
-    form(action="/users/create", method="POST")
+    form(action="/users/create", method="POST", enctype= "multipart/form-data")
      .form-group
         label(for="name") Name 
         span &nbsp;
@@ -19,5 +19,10 @@ block content
         label(for="phone") Phone 
         span &nbsp; 
         input#phone(name="phone", type="text", value= values ? values.phone : "")
+     span &nbsp;
+     .form-group
+        label(for="avatar") Avatar 
+        span &nbsp; 
+        input#avatar.form-control-file(name="avatar", type="file")
 
      button.btn.btn-primary Create

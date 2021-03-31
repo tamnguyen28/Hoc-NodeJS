@@ -38,6 +38,7 @@ module.exports.id = function(req, res){
 
 module.exports.postCreate = function(req, res){
     req.body.id=shortid.generate();
+    req.body.avatar=req.file.path.slice(7);
 
     db.get('usersdb').push(req.body).write();
     res.redirect('/users');//sau khi thuc hien xog se quay lai trang users, k con o trang create

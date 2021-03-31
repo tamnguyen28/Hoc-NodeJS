@@ -1,8 +1,8 @@
 var db= require('../db');
 
 module.exports.product= function(req, res){
-    var page= parseInt(req.query.page) || 1;
-    var perPage=8;
+    var page= parseInt(req.query.page) || 1; //n
+    var perPage=8; //x là số phần tử
     var start= (page-1)*perPage;
     var end= page*perPage;
 

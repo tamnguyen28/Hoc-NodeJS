@@ -6,6 +6,9 @@ var validate = require('../validate/user.validate');
 
 var db= require('../db');
 
+var multer  = require('multer')
+var upload = multer({ dest: './public/uploads/' })
+
 //authMiddleware.requireAuth đặt ở vị trí này có nghĩa là nó sẽ được chạy trước index
 router.get('/', controller.index);
 
@@ -20,6 +23,6 @@ router.get('/create', controller.create);
 
 router.get('/:id', controller.id);
 
-router.post('/create',validate.postCreate, controller.postCreate);
+router.post('/create', upload.single('avatar'),validate.postCreate, controller.postCreate);
 
 module.exports = router;
