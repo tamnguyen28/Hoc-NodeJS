@@ -8,7 +8,7 @@ module.exports.product= function(req, res){
 
     // var drop= (page-1)*perPage;
 
-    res.render('products/product', { 
+    res.render('products/index', { 
         products:db.get('products').value().slice(start,end)
         // products:db.get('products').drop(drop).take(perPage).value(),
     });

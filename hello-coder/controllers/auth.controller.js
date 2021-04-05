@@ -26,7 +26,6 @@ module.exports.postLogin = function(req, res){
         });
         return;
     }
-
     var hashedPasswords = md5(password);
 
     if(user.password !== hashedPasswords){
